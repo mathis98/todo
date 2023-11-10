@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myTodo">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To-Do App</title>
+  <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="../css/Styles.css" />
+	<link rel="stylesheet" type="text/css" href="../css/Login.css" />
+  <script src="https://use.fontawesome.com/cbfba51bd2.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <script src ="./js/socket.js"></script>
+
+  <!--Angular Custom-->
+	<script src="../js/core.js"></script>
+	<script src ="../js/app.routes.js"></script>
+
+  <script src="../js/services/findWithAttrService.js"></script>
+	<script src="../js/services/AuthService.js"></script>
+	<script src="../js/controllers/mainCtrl.js"></script>
+	<script src="../js/controllers/TodoCtrl.js"></script>
+	<script src="../js/controllers/AuthCtrl.js"></script>
+
+<base href="/">
+</head>
+
+<body ng-app="myTodo" ng-controller="mainController">
+	<div ng-view></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<div id="Todos" ng-controller="TodoController">
+    <h1 id="Heading">TODO:</h1>
+    <div id="todosList">
+      <h4 class="TodoListTitle">Todos: </h4>
+    <ul ng-repeat="x in items | filter:{done:false}">
+      <li class="item item1">
+				<input type="checkbox" ng-click="switchTodo(x._id)"></input>
+        <span id={{x._id}} ng-model="textmodel" class="editContent" contenteditable="true" ng-blur="blur(x)" ng-focus="focus(x)" ng-bind="x.text">
+        </span><span class="removeTodo" ng-click="removeTodo(x._id)">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </span>
+      </li>
+    </ul><br>
+    <div><i ng-click="toggleClass()" ng-class="myClass" class="fa fa-chevron-down expand" aria-hidden="true" ng-click="switchDone()"></i>
+      <h4 class="TodoListTitle">Done: <span ng-hide="showDone">(<span ng-bind="doneNumber"></span>)</span>
+        <i class="remover fa fa-trash-o" aria-hidden="true" ng-click="removeDone()" ng-show="showTrash">
+        </i></h4></div>
+      <div id="doneTodos" ng-show="showDone">
+    <ul ng-repeat="x in items | filter:{done:true} | orderBy:'-added'">
+      <li class="item done-item" ng-click="switchTodo(x._id)">
+        <input class="enableCheck" type="checkbox" ng-click="switchTodo(x._id)" checked="checked">
+        <span class="doneSpan" ng-bind="x.text"></span>
+        <span class="removeTodo" ng-click="removeTodo(x._id)">
+          <i ng-class="myClas" class="fa fa-times" aria-hidden="true"></i>
+        </span>
+      </li>
+    </ul></div>
+  </div><br>
+    <form name="todoForm" ng-submit="addTodo" id="formTodo">
+      <div id="enterTodo">
+      <input name="inputTodo" id="input" type="text" ng-model="addMe" required placeholder="Enter Todo" autocomplete="off"></input>
+      <button class="btn btn-light" ng-click="addTodo()" ng-disabled="todoForm.inputTodo.$invalid">Submit</button>
+    </div>
+      <h3 id="error" ng-bind="errorText"></h3>
+    </form>
+  </div>
+  <script>
+  document.getElementById('todosList').addEventListener('keypress', function(evt) {
+		if (evt.which === 13) {
+			evt.preventDefault();
+		}
+	});
+  </script>

@@ -1,0 +1,31 @@
+<div ng-controller="AuthController">
+<div class="login-form" ng-submit="auth.login()">
+	<div class="login-header-wrapper">
+		<h1 class="login-header login-header-lg" ng-click="auth.toggleLogin()">Register</h1>
+		<h1 class="login-header login-header-sm" ng-click="auth.toggleLogin()">Login</h1>
+	</div>
+	<form>
+		<div class="form-group">
+			<div class="form-group" ng-if="auth.primary == 0">
+				<input class="login-input" type='text' ng-model="auth.user.name" name="name" required/>
+				<label>Name</label>
+			</div>
+			<div class="form-group">
+				<input type="email" class="login-input" ng-model="auth.user.email" name="email" required/>
+				<label>E-Mail</label>
+			</div>
+			<div class="form-group password-group">
+				<input type="password" class="login-input" id="login-password" ng-model="auth.user.password" name="password" required />
+				<label>Password</label>
+				<span class="show" ng-show="auth.user.password.length" ng-click="auth.toggleShow()">
+					<i class="fa fa-eye" aria-hidden="true" ng-show="auth.show"></i>
+					<i class="fa fa-eye-slash" aria-hidden="true" ng-show="!auth.show"></i>
+				</span>
+			</div>
+			<div class="form-group btn-groups">
+				<button class="btn btn-outline-primary btn-lg submit" ng-bind="auth.loginFunctions[auth.secondary]"></button>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>

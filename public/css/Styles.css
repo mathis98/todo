@@ -1,0 +1,210 @@
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('../Fonts/Gidole-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'Gidole-Regular', sans-serif;
+}
+
+[contenteditable]:focus {
+	outline: 0px solid transparent;
+}
+
+i.remover {
+	cursor: pointer;
+}
+
+h3#clearTodos {
+	cursor: pointer;
+}
+
+h3#clearTodos:hover {
+	text-decoration: underline;
+}
+
+span.removeTodo {
+	cursor: pointer;
+	color: red;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	display: inline-block;
+	opacity: 0;
+	font-weight: bold;
+}
+
+i.expand {
+	float: left;
+	position: relative;
+	top: 4px;
+	left: -20px;
+	margin-right: -20px;
+	cursor: pointer;
+	color: black;
+	-ms-transform: rotate(0deg); /* IE 9 */
+	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+	transform: rotate(0deg);
+	transition: all linear 0.1s;
+}
+
+i.expand.toggled-class {
+	-ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+	transform: rotate(-90deg);
+	top: 11px;
+}
+
+.item:hover {
+	border-top: 1px solid rgba(0,0,0,.15);
+	border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.item:hover > span.removeTodo {
+	opacity: 100;
+}
+
+h1 {
+	text-decoration: underline;
+}
+
+h1#Heading {
+	text-align: center;
+	margin-top: -10px;
+}
+
+span#delete {
+	cursor: pointer;
+	color: red;
+}
+
+h3#error {
+	color: red;
+}
+
+span.remove {
+	text-decoration: line-through;
+	color: red;
+}
+
+h2#settings {
+	cursor: pointer;
+	position: relative;
+}
+
+div#settings {
+	position: fixed;
+	top: -5px;
+	right: 5px;
+	z-index: 4;
+}
+
+i#Wheel {
+	position: fixed;
+	right: 5px;
+}
+
+div#Menu {
+	position: relative;
+	top: 25px;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 10px;
+}
+
+div#Todos {
+	width: 720px;
+	margin: 0 auto;
+	background-color: #34e874;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-indent: 10px;
+	position: relative;
+}
+
+input#input,
+li,
+form,
+button {
+	font-size: 16px;
+}
+
+ul {
+	list-style-type: none;
+	position: relative;
+	left: 20px;
+}
+
+input, button{
+	border-radius: 5px!important;
+}
+
+input[type='checkbox'] {
+	padding: 10px;
+	cursor: pointer;
+}
+
+input[type='text'], input[type='password'], input[type='email'] {
+	background-color: white;
+	box-shadow: none;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+div#enterTodo {
+	width: 372px;
+	margin: 0 auto;
+}
+
+div#todosList {
+	margin-left: 40px;
+}
+
+.TodoListTitle{
+	margin-bottom: 15px;
+}
+
+.item {
+	text-indent: -25px;
+	margin-left: -60px;
+	max-width: 80vw;
+	word-wrap: break-word;
+	width: 650px;
+	padding: 5px 45px 5px 53px;
+	padding-right: 0px;
+	margin-bottom: -15px;
+	margin-top: -15px;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	cursor: pointer;
+}
+
+.item input {
+	position: relative;
+	top: -2px;
+	margin-right: 5px;
+}
+
+.doneSpan {
+	text-decoration:line-through;
+	color: grey;
+}
+
+.item1 {
+	cursor: text;
+}
+
+@media (max-width: 770px) {
+	div#Todos {
+		width: 100%;
+	}
+	span.removeTodo {
+		position: absolute;
+		right: 6vw;
+		top: 7px;
+	}
+	.item{
+		padding-right: 50px;
+	}
+}

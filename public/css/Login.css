@@ -1,0 +1,136 @@
+.login-header-wrapper{
+	width: 100%;
+	display: block;
+	height: 70px;
+}
+
+.login-header{
+	float: left;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #1AAB8A;
+}
+
+.login-header-sm{
+	font-size: 18px;
+	float: right;
+	cursor: pointer;
+	text-decoration: none;
+	position: relative;
+	left: 20px;
+}
+
+.login-header-sm:hover{
+	text-decoration: underline;
+}
+
+.login-header-lg{
+	cursor: pointer;
+	text-decoration: none;
+	position: absolute;
+	left: -150px;
+	right: 0;
+}
+
+.login-header-lg:hover{
+	text-decoration: underline;
+}
+
+.login-form{
+	margin: 0 auto;
+	width: 400px;
+	height: 440px;
+	text-align: left;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 20px;
+	padding-top: 50px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: relative;
+	top: 20px;
+}
+
+.login-form input{
+	float: right;
+	width: 300px;
+	text-align: left;
+	background-color: rgba(255,255,255,0);
+}
+
+.login-form input::placeholder{
+	text-align: center;
+	color: rgb(65, 65, 65);
+}
+
+.login-input{
+	outline: none;
+	border-left: none!important;
+	border-right: none!important;
+	border-top: none!important;
+	border-radius: 0px!important;
+	transform: 0.5s ease;
+}
+
+label {
+	top: -30px;
+	left: 0px;
+	color: #999;
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	text-align: left;
+}
+
+label {
+	transition: .5s;
+	pointer-events: none;
+}
+
+.show{
+	float: right;
+	position: relative;
+	top: -25px;
+	cursor: pointer;
+}
+
+.login-form input:focus ~ label,
+.login-form textarea:focus ~ label,
+.login-form input:valid ~ label{
+	top: -60px;
+	left: 0px;
+	color: #1AAB8A;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.login-form input:focus,
+.login-form textarea:focus,
+.login-form input:valid,
+.login-form textarea:valid{
+	border-bottom: 1px solid #1AAB8A;
+}
+
+.btn-groups{
+	text-align: center;
+}
+
+.btn-outline-primary{
+	color: #1AAB8A!important;
+	border-color: #1AAB8A!important;
+}
+
+.btn-outline-primary:hover{
+	background-color: #1AAB8A!important;
+	color: white!important;
+}
+
+@media(max-width: 400px){
+	.login-form{
+		width: 100vw;
+		top: 0px;
+	}
+	.login-form input{
+		width: 100%;
+	}
+}
